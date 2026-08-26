@@ -318,7 +318,7 @@ export const accomplishments = [
     starId: "star-orange",
     color: "text-[#f59e0b]",
     align: "items-start text-left",
-    text: "Worked on AI-driven solutions that combine automation, modern app development, and practical business growth.",
+    text: "Worked on AI-driven solutions that combine automation, modern web development, and practical business growth.",
   },
 ];
 
