@@ -30,7 +30,7 @@ export default function Header() {
 
   return (
     <>
-      <header className="py-6 md:py-0 md:absolute md:top-[22px] md:left-[32px] md:right-[32px] md:h-[40px] flex items-center justify-between z-40">
+      <header className="py-6 md:py-0 md:absolute md:top-[22px] md:left-[32px] md:right-8 md:h-[40px] flex items-center justify-between z-60">
         <Logo id="nav-logo" />
 
         <div className="hidden md:flex items-center justify-center absolute left-1/2 transform -translate-x-1/2 gap-8 text-[12px] font-semibold text-gray-400 select-none">

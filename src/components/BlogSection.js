@@ -3,19 +3,41 @@
 import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import FadeIn from "./FadeIn";
 import { blogs } from "@/data/content";
 
 export default function BlogSection() {
   const [activeIndex, setActiveIndex] = useState(0);
-  const visibleBlogs = blogs.slice(activeIndex, activeIndex + 3);
+  const [isMobile, setIsMobile] = useState(false);
+  const visibleCount = isMobile ? 1 : 3;
+  const maxIndex = Math.max(blogs.length - visibleCount, 0);
+  const visibleBlogs = blogs.slice(activeIndex, activeIndex + visibleCount);
   const canGoBack = activeIndex > 0;
-  const canGoForward = activeIndex < blogs.length - 3;
+  const canGoForward = activeIndex < maxIndex;
+
+  useEffect(() => {
+    const mobileQuery = window.matchMedia("(max-width: 767px)");
+    const updateViewport = () => setIsMobile(mobileQuery.matches);
+
+    updateViewport();
+    mobileQuery.addEventListener("change", updateViewport);
+    return () => mobileQuery.removeEventListener("change", updateViewport);
+  }, []);
+
+  useEffect(() => {
+    if (!isMobile || blogs.length <= 1) return undefined;
+
+    const intervalId = window.setInterval(() => {
+      setActiveIndex((currentIndex) => (currentIndex + 1) % blogs.length);
+    }, 4500);
+
+    return () => window.clearInterval(intervalId);
+  }, [isMobile]);
 
   function moveSlider(direction) {
     setActiveIndex((currentIndex) =>
-      Math.min(Math.max(currentIndex + direction, 0), blogs.length - 3),
+      Math.min(Math.max(currentIndex + direction, 0), maxIndex),
     );
   }
 
@@ -72,7 +94,7 @@ export default function BlogSection() {
             ))}
             </div>
 
-            {blogs.length > 3 && (
+            {blogs.length > visibleCount && (
               <div className="mt-8 flex justify-end gap-3">
                 <button
                   type="button"
