@@ -243,6 +243,7 @@ export const projects = [
     urlLabel: "Visit Website",
     bgColor: "bg-[#F5F2EC]",
     image: "/ev-bus.png",
+    video:"/monitoringBus.mp4",
     tags: [
       "EV bus monitoring system",
       "electric bus management",
