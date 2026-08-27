@@ -2,7 +2,7 @@
 
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const navLinks = [
   { label: "Home", href: "#home", isButton: true },
@@ -28,9 +28,25 @@ function Logo({ id }) {
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
+  useEffect(() => {
+    if (!mobileOpen) return undefined;
+
+    const closeOnEscape = (event) => {
+      if (event.key === "Escape") setMobileOpen(false);
+    };
+
+    document.body.style.overflow = "hidden";
+    document.addEventListener("keydown", closeOnEscape);
+
+    return () => {
+      document.body.style.overflow = "";
+      document.removeEventListener("keydown", closeOnEscape);
+    };
+  }, [mobileOpen]);
+
   return (
     <>
-      <header className="py-6 md:py-0 md:absolute md:top-[22px] md:left-[32px] md:right-8 md:h-[40px] flex items-center justify-between z-60">
+      <header className="fixed top-0 left-0 right-0 z-60 px-6 py-6 bg-foreground/90 backdrop-blur-md border-b border-white/10 md:bg-transparent md:backdrop-blur-none md:border-0 md:px-0 md:py-0 md:absolute md:top-5.5 md:left-8 md:right-8 md:h-10 flex items-center justify-between">
         <Logo id="nav-logo" />
 
         <div className="hidden md:flex items-center justify-center absolute left-1/2 transform -translate-x-1/2 gap-8 text-[12px] font-semibold text-gray-400 select-none">
@@ -84,13 +100,19 @@ export default function Header() {
           id="mobile-menu-toggle"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Toggle menu"
+          aria-expanded={mobileOpen}
+          aria-controls="mobile-navigation"
         >
           {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
       </header>
 
       {mobileOpen && (
-        <div className="fixed inset-0 z-50 bg-surface-dark/98 backdrop-blur-sm md:hidden">
+        <div
+          className="fixed inset-0 z-50 bg-surface-dark/98 backdrop-blur-sm md:hidden"
+          id="mobile-navigation"
+          aria-label="Mobile navigation"
+        >
           <div className="flex flex-col items-center justify-center h-full gap-8 text-lg font-semibold text-gray-300">
             {navLinks.map((link) => (
               <a
