@@ -113,7 +113,7 @@ export default function Header() {
           id="mobile-navigation"
           aria-label="Mobile navigation"
         >
-          <div className="flex flex-col items-center justify-center h-full gap-8 text-lg font-semibold text-gray-300">
+          <div className="flex flex-col bg-[#000000a5] items-center justify-center h-full gap-8 text-lg font-semibold text-gray-300">
             {navLinks.map((link) => (
               <a
                 key={link.label}

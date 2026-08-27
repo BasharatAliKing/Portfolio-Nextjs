@@ -3,14 +3,17 @@ import { skills } from "@/data/content";
 
 export default function Skills() {
   return (
-    <section className="bg-white py-12 md:py-24 border-t border-gray-50" id="about">
+    <section
+      className="bg-white py-12 md:py-24 border-t border-gray-50"
+      id="about"
+    >
       <div className="max-w-[1280px] mx-auto px-6 md:px-8">
         <FadeIn>
           <h2 className="text-[32px] sm:text-[48px] md:text-[54px] font-display font-bold text-center text-black leading-[0.95] uppercase tracking-[-0.04em] mb-16 md:mb-20">
             I SPECIALIZE IN A <br className="hidden md:block" />
             RANGE OF{" "}
             <span className="inline-flex items-center gap-1.5 align-baseline">
-              💪 SKILLS
+              🧑‍💻 SKILLS
             </span>
           </h2>
         </FadeIn>
