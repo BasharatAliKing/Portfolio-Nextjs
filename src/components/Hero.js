@@ -19,7 +19,7 @@ export default function Hero() {
         <Header />
 
         <div className="pt-24 sm:pt-28 md:pt-36 pb-0 lg:pt-0 lg:pb-0 h-full">
-          <div className="lg:absolute lg:left-[32px] lg:top-[220px] lg:w-[520px] xl:w-[760px] 2xl:w-[1160px] z-10 relative">
+          <div className="lg:absolute mt-[60px] md:mt-0 lg:left-[32px] lg:top-[220px] lg:w-[520px] xl:w-[760px] 2xl:w-[1160px] z-10 relative">
             <FadeIn>
               <h1
                 className="font-display font-bold text-white text-[30px] sm:text-[48px] md:text-[54px] lg:text-[62px] leading-[0.9] tracking-[-0.05em] uppercase mb-0"
