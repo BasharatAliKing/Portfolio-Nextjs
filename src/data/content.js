@@ -352,7 +352,7 @@ export const testimonials = [
 
 export const socialLinks = [
   {
-    label: "li.",
+    label: "Li.",
     href: "https://www.linkedin.com/in/bdking007/",
   },
   {
