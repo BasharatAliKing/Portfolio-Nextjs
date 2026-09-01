@@ -360,7 +360,7 @@ export const socialLinks = [
     href: "/",
   },
   {
-    label: "Ins.",
+    label: "In.",
     href: "https://www.instagram.com/basharatali07/",
   },
 ];
