@@ -243,7 +243,7 @@ export const projects = [
     urlLabel: "Visit Website",
     bgColor: "bg-[#F5F2EC]",
     image: "/ev-bus.png",
-    video:"/monitoringBus.mp4",
+    video: "/monitoringBus.mp4",
     tags: [
       "EV bus monitoring system",
       "electric bus management",
@@ -290,10 +290,10 @@ export const blogs = [
   },
   {
     slug: "pet-care-modern-pet-services-website",
-  title: "Pet.Care – Modern Pet Care & Services Website",
-  excerpt:
-    "**Pet.Care** is a modern and friendly pet care website designed to provide pet owners with a warm, trustworthy, and engaging digital experience. The website features dedicated sections for pet care services, pet gifts, home visits, veterinary services, best-selling pet products, client testimonials, contact forms, and helpful information. With playful pet imagery, a soft peach and orange color palette, clean layouts, responsive design, and intuitive navigation, the platform creates a welcoming online experience for pet owners and their beloved companions.",
-  category: "Pet Care",
+    title: "Pet.Care – Modern Pet Care & Services Website",
+    excerpt:
+      "**Pet.Care** is a modern and friendly pet care website designed to provide pet owners with a warm, trustworthy, and engaging digital experience. The website features dedicated sections for pet care services, pet gifts, home visits, veterinary services, best-selling pet products, client testimonials, contact forms, and helpful information. With playful pet imagery, a soft peach and orange color palette, clean layouts, responsive design, and intuitive navigation, the platform creates a welcoming online experience for pet owners and their beloved companions.",
+    category: "Pet Care",
     image: "/petCares.png",
     url: "https://teal-bublanina-5595ac.netlify.app/",
   },
@@ -324,7 +324,7 @@ export const accomplishments = [
 ];
 
 export const testimonials = [
-  {
+  { 
     quote:
       "Working with Basharat was a great experience. He understands both technology and business needs, and knows how to turn ideas into scalable web app solutions.",
     name: "Client / Startup Founder",
@@ -352,15 +352,15 @@ export const testimonials = [
 
 export const socialLinks = [
   {
-    label: "Ig.",
-    href: "http://instagram.com/bdking141/",
+    label: "Li.",
+    href: "https://www.linkedin.com/in/bdking007/",
   },
   {
     label: "X.",
     href: "/",
   },
   {
-    label: "In.",
-    href: "https://www.linkedin.com/in/bdking007/",
+    label: "Ins.",
+    href: "https://www.instagram.com/basharatali07/",
   },
 ];
