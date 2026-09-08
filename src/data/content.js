@@ -297,6 +297,15 @@ export const blogs = [
     image: "/petCares.png",
     url: "https://teal-bublanina-5595ac.netlify.app/",
   },
+ {
+  slug: "leadbud-b2b-lead-generation-platform",
+  title: "Leadbud.io – B2B Lead Generation & Email Finder Platform",
+  excerpt:
+    "**Leadbud.io** is a modern B2B lead generation platform designed to help businesses discover verified email addresses, find targeted prospects, and build powerful contact databases. The website features an email finder, company and contact search, advanced filtering, real-time analytics, database insights, customer testimonials, FAQs, and conversion-focused call-to-action sections. With a clean SaaS-style interface, vibrant green and white color palette, responsive layouts, intuitive navigation, and modern dashboard visuals, the platform delivers a professional and engaging experience for businesses looking to streamline their outreach and grow their leads.",
+  category: "SaaS & Lead Generation",
+  image: "/leadbud.png",
+  url: "https://exquisite-taiyaki-bb2767.netlify.app/",
+},
 ];
 
 export const accomplishments = [
