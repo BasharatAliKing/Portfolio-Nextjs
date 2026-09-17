@@ -1,4 +1,4 @@
-import { ArrowUpRight, ArrowUpRightIcon } from "lucide-react";
+import { ArrowRight, ArrowUpRight, ArrowUpRightIcon } from "lucide-react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { projects } from "@/data/content";
@@ -46,10 +46,45 @@ export default async function ProjectPage({ params }) {
         </h1>
 
         <p className="text-gray-600 text-lg font-medium leading-relaxed mb-8">
-          {project.description}
+          {project.description.overview}
         </p>
 
-        <div className="flex flex-wrap gap-2 mb-10">
+       {/* Major Contributions */}
+<div className="mb-10">
+  <div className="flex items-center gap-3 mb-6">
+    <div className="w-2 h-2 rounded-full bg-[#b5ff2b]" />
+    <h2 className="font-display font-bold text-2xl md:text-3xl uppercase tracking-tight">
+      Major Contributions
+    </h2>
+  </div>
+
+  <div className="grid gap-3">
+    {project.description.majorContributions.map((item, index) => (
+      <div
+        key={index}
+        className="group flex items-start gap-4 p-4 md:p-5 rounded-2xl border border-neutral-200 bg-neutral-50 hover:bg-black hover:border-black transition-all duration-300"
+      >
+        {/* Number */}
+        <div className="shrink-0 w-9 h-9 rounded-full bg-black text-white group-hover:bg-[#b5ff2b] group-hover:text-black flex items-center justify-center font-bold text-sm transition-all duration-300">
+          {String(index + 1).padStart(2, "0")}
+        </div>
+
+        {/* Contribution */}
+        <p className="text-gray-700 group-hover:text-white font-medium leading-relaxed transition-colors duration-300 pt-1">
+          {item}
+        </p>
+
+        {/* Arrow */}
+        <ArrowUpRight
+          size={18}
+          className="ml-auto shrink-0 text-gray-400 group-hover:text-[#b5ff2b] transition-all duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+        />
+      </div>
+    ))}
+  </div>
+</div>
+
+        {/* <div className="flex flex-wrap gap-2 mb-10">
           {project.tags.map((tag) => (
             <span
               key={tag}
@@ -58,7 +93,7 @@ export default async function ProjectPage({ params }) {
               {tag}
             </span>
           ))}
-        </div>
+        </div> */}
         <div className="flex flex-wrap items-center gap-4 mb-10">
           {project.url && (
             <a

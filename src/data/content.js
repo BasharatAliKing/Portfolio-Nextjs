@@ -60,8 +60,17 @@ export const projects = [
   {
     slug: "pmis",
     title: "PMIS",
-    description:
-      "A comprehensive project management information system designed to streamline project operations, manage critical documents, track financial and contractual records, and provide real-time insights. PMIS brings stakeholders, LOIs, work orders, control estimates, bank guarantees, invoices, IPCs, EOTs, inspections, estimates, meetings, punch lists, and change orders together in one centralized platform for better control, transparency, and efficient project delivery.",
+    description: {
+      overview:
+        "A comprehensive Project Management Information System designed to centralize project operations, documents, financial and contractual records, progress tracking, and stakeholder information. I developed the complete frontend and integrated it with the Django REST APIs provided by the backend development team.",
+      majorContributions: [
+        "Developed the complete responsive frontend using React.js and Tailwind CSS.",
+        "Built modules for Projects, MPR, Project Progress, LOI, Stakeholders, Work Orders, Control Estimates, Bank Guarantees, Monthly Invoice Logs, IPC, EOT, and related project records.",
+        "Developed dashboards with KPIs, charts, statistics, filters, search, pagination, and data visualization.",
+        "Integrated Django REST APIs and implemented authentication, protected routes, API data handling, and form workflows.",
+        "Created reusable components, forms, tables, modals, dropdowns, and responsive layouts for maintainable frontend architecture.",
+      ],
+    },
     urlLabel: "Visit PMIS",
     bgColor: "bg-[#F5F2EC]",
     image: "/pmis.png",
@@ -88,8 +97,18 @@ export const projects = [
   {
     slug: "progress-center",
     title: "Progress Center",
-    description:
-      "A centralized project management platform designed to streamline project progress, monitor activities, track milestones, and provide real-time insights. Progress Center helps teams manage projects efficiently, monitor performance, collaborate seamlessly, and stay connected throughout the project lifecycle.",
+    description: {
+      overview:
+        "A centralized Construction Project Monitoring and Management Platform designed to track project progress, schedules, daily reporting, live site cameras, environmental conditions, milestones, and overall project performance in one platform.",
+
+      majorContributions: [
+        "Developed the frontend using React.js and Tailwind CSS and the backend using Node.js, Express.js, and MongoDB.",
+        "Implemented project progress tracking, DPR, project schedules, milestones, timelapse visualization, and progress reporting modules.",
+        "Integrated live construction-site cameras using Hikvision, RTMP, MediaMTX, FFmpeg, and HLS streaming.",
+        "Developed AQI monitoring, AI-powered site monitoring, project dashboards, KPIs, meetings, and collaboration features.",
+        "Implemented REST APIs, authentication, automated background jobs, file handling, database operations, and production deployment using Nginx and PM2.",
+      ],
+    },
     urlLabel: "Visit Progress Center",
     bgColor: "bg-[#E7FBF7]",
     image: "/progressCenter.png",
@@ -116,8 +135,18 @@ export const projects = [
   {
     slug: "dakk-system",
     title: "DAKK System",
-    description:
-      "A centralized platform for NESPAK to manage incoming and outgoing DAKs, create letters and memos, track correspondence, verify records through QR codes, and securely organize documents without paperwork.",
+    description: {
+      overview:
+        "A centralized DAKK Management System developed for NESPAK to digitize incoming and outgoing correspondence, manage scanned documents, generate official letters and memos, and provide secure document verification through QR codes.",
+
+      majorContributions: [
+        "Developed the complete frontend using React.js and backend using Node.js, Express.js, and MongoDB.",
+        "Implemented DAKK receiving, registration, forwarding, correspondence tracking, scanned document management, and status workflows.",
+        "Developed dynamic Letter and Memo generation using DOCX templates, Docxtemplater, PizZip, and PDF conversion.",
+        "Implemented QR-code-based document verification with unique verification records and verification APIs.",
+        "Implemented JWT authentication, file uploads, Zod validation, document preview, template management, and CRUD REST APIs.",
+      ],
+    },
     urlLabel: "Visit Platform",
     bgColor: "bg-[#1e1e24]",
     image: "/dakk.png",
@@ -143,8 +172,18 @@ export const projects = [
   {
     slug: "check-request-portal",
     title: "Check Request Portal",
-    description:
-      "A digital check request portal that enables teams to submit, manage, track, and monitor inspection requests throughout the project lifecycle. The platform streamlines communication between project teams, improves request handling, and provides a centralized system for efficient inspection and approval workflows.",
+    description: {
+      overview:
+        "A digital Check Request and inspection management portal designed to streamline inspection requests, approvals, communication, and tracking throughout the construction project lifecycle.",
+
+      majorContributions: [
+        "Developed the complete React.js frontend and Node.js, Express.js, and MongoDB backend.",
+        "Implemented the complete inspection workflow between Contractors, Consultants, Inspectors, Surveyors, ME, ARE, and RE.",
+        "Developed role-based authentication and authorization for different project stakeholders.",
+        "Built KPI dashboards and statistics for tracking pending, received, approved, rejected, reverted, and expired requests.",
+        "Implemented REST APIs, validation, project and contractor management, file handling, and automated request expiration using Node Cron.",
+      ],
+    },
     urlLabel: "Visit Check Request Portal",
     bgColor: "bg-[#173024]",
     image: "/ncrp.png",
@@ -167,8 +206,18 @@ export const projects = [
   {
     slug: "green-ceo",
     title: "Green CEO",
-    description:
-      "A professional environmental services platform focused on sustainability, green initiatives, and delivering innovative solutions for a cleaner and more sustainable future.",
+    description: {
+      overview:
+        "A full-stack environmental and sustainability platform focused on green initiatives, community engagement, events, membership, and dynamic organizational content. The platform includes both a public-facing website and an administrative dashboard for content management.",
+
+      majorContributions: [
+        "Developed the complete frontend using React.js, Tailwind CSS, React Router, and reusable UI components.",
+        "Developed the Node.js, Express.js, and MongoDB backend with RESTful APIs and database models.",
+        "Built the admin dashboard for managing CEOs, core members, events, homepage content, messages, memorable moments, and other website content.",
+        "Implemented membership application workflows, media/file management, authentication, and protected admin routes.",
+        "Integrated dynamic content management, CRUD operations, validation, and responsive UI across the platform.",
+      ],
+    },
     urlLabel: "Visit Website",
     bgColor: "bg-[#F5F2EC]",
     image: "/green.png",
@@ -191,8 +240,18 @@ export const projects = [
   {
     slug: "saff-pani-inspection",
     title: "Saff Pani Inspection",
-    description:
-      "PSPA Inspection Portal is a comprehensive **Punjab Saaf Pani inspection and project monitoring system** designed to streamline plant inspections, BOQ verification, contractor bill evaluation, and payment management. The platform enables inspectors to record on-site progress, verify approved quantities and budgets against actual work, manage inspection records, and maintain complete project documentation. It also supports contractor bill verification and provides a transparent workflow from **site inspection and BOQ approval to bill verification and payment release**, helping improve accountability, accuracy, and financial transparency across water infrastructure projects.",
+    description: {
+      overview:
+        "A Punjab Saaf Pani inspection and project monitoring system designed to manage plant inspections, BOQ verification, contractor bill evaluation, and payment-related workflows. The platform provides structured inspection records and project documentation for water infrastructure projects.",
+
+      majorContributions: [
+        "Developed the frontend using React.js and the backend using Django REST Framework with PostgreSQL.",
+        "Implemented inspection site management with project, contractor, geographic, location, and inspection details.",
+        "Developed BOQ and BOQ Bill management, quantity verification, inspection workflows, and project progress tracking.",
+        "Implemented Third-Party Inspection workflows and TPV proformas including TPV-01, TPV-02, and TPV-02A.",
+        "Developed REST APIs, authentication, role-based workflows, Excel-based BOQ data import, and database models.",
+      ],
+    },
     urlLabel: "Visit Website",
     bgColor: "bg-[#F5F2EC]",
     image: "/saffPani.png",
@@ -216,8 +275,18 @@ export const projects = [
   {
     slug: "air-punjab",
     title: "Air Punjab",
-    description:
-      "A modern airline platform designed for **Air Punjab, the first airline initiative by the Government of Punjab**, offering a seamless digital experience for flight booking, trip management, check-in, flight status, destinations, and cabin services.",
+    description: {
+      overview:
+        "A modern airline web platform designed for Air Punjab, providing a seamless digital interface for flight booking, trip management, check-in, flight status, destinations, and cabin services. I developed the frontend using Next.js and Tailwind CSS.",
+
+      majorContributions: [
+        "Developed the complete frontend using Next.js and Tailwind CSS.",
+        "Built responsive pages, layouts, navigation, and reusable components across the airline platform.",
+        "Implemented interfaces for flight booking, trip management, check-in, flight status, destinations, and cabin services.",
+        "Created interactive UI sections, animations, transitions, and user-friendly navigation.",
+        "Optimized the frontend architecture for responsiveness, maintainability, and future API integration.",
+      ],
+    },
     urlLabel: "Visit Website",
     bgColor: "bg-[#F5F2EC]",
     image: "/air-punjab.png",
@@ -238,8 +307,18 @@ export const projects = [
   {
     slug: "ev-bus-monitoring",
     title: "EV Bus Monitoring",
-    description:
-      "A modern **EV Bus Monitoring Dashboard** designed to efficiently manage and monitor electric bus operations in Lahore, providing real-time bus tracking, complete vehicle information, route and trip management, ridership analytics, fleet performance, and detailed bus health insights for smarter and more sustainable public transportation.",
+    description: {
+      overview:
+        "A modern EV Bus Monitoring Dashboard designed to monitor and manage electric bus operations in Lahore, including real-time bus tracking, routes, trips, ridership, revenue, fleet performance, and vehicle health information.",
+
+      majorContributions: [
+        "Developed the complete monitoring dashboard using React.js and Tailwind CSS.",
+        "Implemented real-time map visualization using Leaflet for bus locations, routes, stops, and individual bus tracking.",
+        "Built modules for bus management, trip management, route management, contractors, revenue, mileage, and EV bus health.",
+        "Integrated OpenRouteService through a Node.js and Express.js proxy for route calculation and secure API-key handling.",
+        "Developed dashboards, charts, filters, time-based reports, authentication flows, and reusable UI components.",
+      ],
+    },
     urlLabel: "Visit Website",
     bgColor: "bg-[#F5F2EC]",
     image: "/ev-bus.png",
@@ -297,15 +376,15 @@ export const blogs = [
     image: "/petCares.png",
     url: "https://teal-bublanina-5595ac.netlify.app/",
   },
- {
-  slug: "leadbud-b2b-lead-generation-platform",
-  title: "Leadbud.io – B2B Lead Generation & Email Finder Platform",
-  excerpt:
-    "**Leadbud.io** is a modern B2B lead generation platform designed to help businesses discover verified email addresses, find targeted prospects, and build powerful contact databases. The website features an email finder, company and contact search, advanced filtering, real-time analytics, database insights, customer testimonials, FAQs, and conversion-focused call-to-action sections. With a clean SaaS-style interface, vibrant green and white color palette, responsive layouts, intuitive navigation, and modern dashboard visuals, the platform delivers a professional and engaging experience for businesses looking to streamline their outreach and grow their leads.",
-  category: "SaaS & Lead Generation",
-  image: "/leadbud.png",
-  url: "https://exquisite-taiyaki-bb2767.netlify.app/",
-},
+  {
+    slug: "leadbud-b2b-lead-generation-platform",
+    title: "Leadbud.io – B2B Lead Generation & Email Finder Platform",
+    excerpt:
+      "**Leadbud.io** is a modern B2B lead generation platform designed to help businesses discover verified email addresses, find targeted prospects, and build powerful contact databases. The website features an email finder, company and contact search, advanced filtering, real-time analytics, database insights, customer testimonials, FAQs, and conversion-focused call-to-action sections. With a clean SaaS-style interface, vibrant green and white color palette, responsive layouts, intuitive navigation, and modern dashboard visuals, the platform delivers a professional and engaging experience for businesses looking to streamline their outreach and grow their leads.",
+    category: "SaaS & Lead Generation",
+    image: "/leadbud.png",
+    url: "https://exquisite-taiyaki-bb2767.netlify.app/",
+  },
 ];
 
 export const accomplishments = [
@@ -333,7 +412,7 @@ export const accomplishments = [
 ];
 
 export const testimonials = [
-  { 
+  {
     quote:
       "Working with Basharat was a great experience. He understands both technology and business needs, and knows how to turn ideas into scalable web app solutions.",
     name: "Client / Startup Founder",

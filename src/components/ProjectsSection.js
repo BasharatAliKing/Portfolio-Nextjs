@@ -39,15 +39,16 @@ function ProjectCard({ project }) {
         {project.title}
       </h3>
       <p className="text-gray-500 text-sm md:text-[15px] leading-relaxed mb-6 font-semibold line-clamp-2">
-        {project.description}
+        {project.description.overview}
       </p>
+
 
       <div className="flex flex-wrap gap-2 mb-6">
         {project.tech.map((tag) => (
           <span
-      key={tag}
-      className="inline-flex items-center rounded-full border shadow border-neutral-200 bg-neutral-50 px-4 py-2 text-xs font-semibold text-neutral-700 transition-all duration-300 hover:border-neutral-900 hover:bg-neutral-900 hover:text-white"
-    >
+            key={tag}
+            className="inline-flex items-center rounded-full border shadow border-neutral-200 bg-neutral-50 px-4 py-2 text-xs font-semibold text-neutral-700 transition-all duration-300 hover:border-neutral-900 hover:bg-neutral-900 hover:text-white"
+          >
             {tag}
           </span>
         ))}
@@ -82,7 +83,7 @@ export default function ProjectsSection() {
         </FadeIn>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-          {projects.slice(0,4).map((project, index) => (
+          {projects.slice(0, 4).map((project, index) => (
             <FadeIn key={project.slug} delay={index * 0.08}>
               <ProjectCard project={project} />
             </FadeIn>
